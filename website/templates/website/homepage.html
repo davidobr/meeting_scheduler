@@ -1,0 +1,28 @@
+{% extends 'basepage.html' %}
+
+{% block title%}Meeting Scheduler{% endblock %}
+
+{% block content %}
+    <div class="header col-12 mx-auto text-center align-items-center">
+        <h1 class="col-12 mx-auto">Meeting Scheduler</h1>
+        <div class="row mx-auto">
+            <div id="nav" class="col-12 mx-auto">
+                <a href="{% url 'home' %}" class="navigation p-2">Home</a>
+                <a href="{% url 'meetings' %}" class="navigation p-2">Meetings</a>
+            </div>
+        </div>
+    </div>
+        <p>
+            Welcome to my meeting scheduler. I am currently learning Django and decided to take this on as a project
+        </p>
+        <p>
+            Future development for this feature should include:
+            <ul>
+                <li>Ability to see meetings</li>
+                <li>Ability to see meeting details</li>
+                <li>Create a new meeting</li>
+                <li>Aim to add more as time goes on</li>
+            </ul>
+        </p>
+    </div>
+{% endblock %}
