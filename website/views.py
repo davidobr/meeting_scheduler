@@ -11,4 +11,4 @@ def homepage(request):
 def meeting(request):
     current_meetings = Meeting.objects.all()
     meetings_count = Meeting.objects.count()
-    return render(request, 'website/meetings.html', {'meetings': current_meetings, "meeting_count": meetings_count})
+    return render(request, 'website/meetings.html', {'meetings': current_meetings, 'meeting_count': meetings_count})
