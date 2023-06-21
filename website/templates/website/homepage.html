@@ -23,6 +23,13 @@
                 <li>Create a new meeting</li>
                 <li>Aim to add more as time goes on</li>
             </ul>
+        <p>
+            {% if all_meetings <= 0 %}
+                There are currently no meetings. Get booking!
+            {% elif all_meetings == 1 %}
+                There is currently {{all_meetings}} meeting booked
+            {% else %}
+                There are currently {{all_meetings}} meeting stored
+            {% endif %}
         </p>
-    </div>
 {% endblock %}

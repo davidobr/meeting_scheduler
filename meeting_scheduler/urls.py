@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', homepage, name="home"),
     path('meetings', meeting, name="meetings"),
+    path('meetings/', include('meetings.urls')),
 ]
