@@ -12,21 +12,19 @@
         </div>
     </div>
     <div id="meetings" class="col-10 col-lg-2 mx-auto mt-5 mx-auto align-items-center">
-      <div class="card text-bg-primary mb-3">
-          <div class="card-header">
-              Placeholder text 1 header
-          </div>
-          <div class="card-body">
-              <p class="card-text">Placeholder text 1</p>
-          </div>
-      </div>
-      <div class="col-5 card text-bg-primary mb-3">
-          <div class="card-header">
-              Placeholder text 2 header
-          </div>
-          <div class="card-body">
-              <p class="card-text">Placeholder text 2</p>
-          </div>
+        {% if meeting_count > 0 %}
+            {% for meeting in meetings %}
+            <div class="card text-bg-primary mb-3">
+              <div class="card-header">
+                  {{meeting.meeting_title}}
+              </div>
+              <div class="card-body">
+                  <p class="card-text">booked for {{meeting.date}} at {{meeting.start_time}}</p>
+              </div>
+            {% endfor %}
+        {% else %}
+                No meetings booked, get booking!
+        {% endif %}
       </div>
     </div>
 {% endblock %}
