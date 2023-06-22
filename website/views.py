@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from meetings.models import Meeting
+from meetings.models import Meeting, Room
 
 
 def homepage(request):
@@ -12,3 +12,8 @@ def meeting(request):
     current_meetings = Meeting.objects.all()
     meetings_count = Meeting.objects.count()
     return render(request, 'website/meetings.html', {'meetings': current_meetings, 'meeting_count': meetings_count})
+
+
+def rooms(request):
+    rooms_page = Room.objects.all()
+    return render(request, 'website/rooms.html', {'rooms': rooms_page})
