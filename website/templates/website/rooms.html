@@ -1,5 +1,5 @@
 {% extends 'basepage.html' %}
-{% block title %}Meetings{% endblock %}
+{% block title %}Rooms{% endblock %}
 
 {% block content %}
     <div class="header col-12 mx-auto text-center align-items-center">
@@ -12,21 +12,16 @@
             </div>
         </div>
     </div>
-    <div id="meetings" class="col-10 col-lg-2 mx-auto mt-5 mx-auto align-items-center">
-        {% if meeting_count > 0 %}
-            {% for meeting in meetings %}
+    <div id="rooms" class="col-10 col-lg-2 mx-auto mt-5 mx-auto align-items-center">
+        {% for room in rooms %}
             <div class="card text-bg-primary mb-3">
               <div class="card-header">
-                  {{meeting.meeting_title}}
+                  Room name: {{room.room_name}}
               </div>
               <div class="card-body">
-                  <p class="card-text">booked for {{meeting.date}} at {{meeting.start_time}} in room:
-                      <strong>{{meeting.room.room_name}} (Room {{meeting.room.room_number}})</strong></p>
+                  <p class="card-text">Which is room number: {{room.room_number}} on floor {{room.floor_number}}</p>
               </div>
-            {% endfor %}
-        {% else %}
-                No meetings booked, get booking!
-        {% endif %}
-      </div>
+            </div>
+        {% endfor %}
     </div>
 {% endblock %}
