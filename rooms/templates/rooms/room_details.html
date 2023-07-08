@@ -1,0 +1,29 @@
+{% extends 'basepage.html' %}
+{% block title %}Rooms{% endblock %}
+
+{% block content %}
+    <div class="header col-12 mx-auto text-center align-items-center">
+        <h1 class="col-12 mx-auto">Meetings</h1>
+        <div class="row mx-auto">
+            <div id="nav" class="col-12 mx-auto">
+                <a href="{% url 'home' %}" class="navigation p-2">Home</a>
+                <a href="{% url 'meetings' %}" class="navigation p-2">Meetings</a>
+                <a href="{% url 'rooms' %}" class="navigation p-2">Rooms</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-10 col-lg-2 mx-auto mt-5 mx-auto align-items-center">
+        <table class="col-12">
+            <tr>
+                <th>Room name:</th>
+                <th>Room number:</th>
+                <th>Floor number:</th>
+            </tr>
+            <tr>
+                <td>{{room.room_name}}</td>
+                <td>{{room.room_number}}</td>
+                <td>{{room.floor_number}}</td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}
