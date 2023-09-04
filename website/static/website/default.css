@@ -22,3 +22,8 @@ a {
     width: 300px;
     display: inline-block;
 }
+
+.homepage-body {
+    padding-left: 2%;
+    padding-right: 2%;
+}
