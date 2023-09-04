@@ -20,4 +20,7 @@ If you want to run the unit tests
 python manage.py test
 ```
 
-TODO: Create a requirements.txt file
+Installing the modules/packages used on this project enter the following:
+```commandline
+pip install -r requirements.txt
+```
