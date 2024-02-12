@@ -1,11 +1,11 @@
 h1 {
     margin: auto;
-    background-color: rgba(0,0,0,0.8);
+    /*background-color: rgba(0,0,0,0.8);*/
     color: white;
 }
 
 #nav {
-    background-color: rgba(0,0,0,0.8);
+    margin: 1% 0;
 }
 
 a {
@@ -14,7 +14,7 @@ a {
 }
 
 .header {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgb(0,0,0);
     color: white;
 }
 
@@ -25,4 +25,8 @@ a {
 
 .homepage-body {
     padding: 0% 2%;
+}
+
+.update-meeting {
+    text-decoration: underline;
 }

@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.generic import UpdateView
 
 from meetings.models import Meeting, Room
 
@@ -12,6 +13,13 @@ def meeting(request):
     current_meetings = Meeting.objects.all()
     meetings_count = Meeting.objects.count()
     return render(request, 'website/meetings.html', {'meetings': current_meetings, 'meeting_count': meetings_count})
+
+
+class UpdateMeeting(UpdateView):
+    model = Meeting
+    template_name = "website/meeting_update.html"
+    fields = ["meeting_title", "date", "start_time", "meeting_duration", "room"]
+    success_url = "/meetings"
 
 
 def rooms(request):
