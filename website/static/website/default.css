@@ -30,3 +30,8 @@ a {
 .update-meeting {
     text-decoration: underline;
 }
+
+.create-meeting a{
+    color: black;
+    text-decoration: underline;
+}

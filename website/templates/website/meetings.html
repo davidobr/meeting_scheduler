@@ -27,8 +27,11 @@
               </div>
             {% endfor %}
         {% else %}
-                No meetings booked, get booking!
+                No meetings booked, <a href="{% url 'create_meeting' %}"><strong>get booking!</strong></a>
         {% endif %}
       </div>
+    </div>
+    <div class="col-10 col-lg-10 mx-auto mt-5 mx-auto align-items-center create-meeting">
+        <p>Want to create a meeting? <a href="{% url 'create_meeting' %}"><strong>Book it in here</strong></a></p>
     </div>
 {% endblock %}
