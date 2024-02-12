@@ -22,7 +22,7 @@
               <div class="card-body">
                   <p class="card-text">booked for {{meeting.date}} at {{meeting.start_time}} in room:
                       <strong>{{meeting.room.room_name}} (Room {{meeting.room.room_number}})</strong>
-                    <a href="{% url 'update_meeting' meeting.id %}">Want to make changes to the meeting?</a>
+                    <a href="{% url 'update_meeting' meeting.id %}" class="update-meeting">Want to make changes to the meeting?</a>
                   </p>
               </div>
             {% endfor %}

@@ -26,3 +26,7 @@ a {
 .homepage-body {
     padding: 0% 2%;
 }
+
+.update-meeting {
+    text-decoration: underline;
+}
