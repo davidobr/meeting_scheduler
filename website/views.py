@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import UpdateView, CreateView
+from django.views.generic import UpdateView, CreateView, DeleteView
 
 from meetings.models import Meeting, Room
 
@@ -26,6 +26,12 @@ class UpdateMeeting(UpdateView):
     model = Meeting
     template_name = "website/meeting_update.html"
     fields = ["meeting_title", "date", "start_time", "meeting_duration", "room"]
+    success_url = "/meetings"
+
+
+class DeleteMeeting(DeleteView):
+    model = Meeting
+    template_name = "website/delete_meeting.html"
     success_url = "/meetings"
 
 
