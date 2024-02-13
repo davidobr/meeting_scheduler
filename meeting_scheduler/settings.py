@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'website',
     'meetings',
     'rooms',
+    'fontawesomefree',
 ]
 
 MIDDLEWARE = [

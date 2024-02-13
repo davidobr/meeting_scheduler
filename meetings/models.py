@@ -15,7 +15,7 @@ class Meeting(models.Model):
     date = models.DateField()
     start_time = models.TimeField()
     meeting_duration = models.IntegerField()
-    room = models.ForeignKey(Room, on_delete=models.CASCADE)
+    room = models.ForeignKey(Room, on_delete=models.PROTECT)
 
     def __str__(self):
         return f"{self.meeting_title} is at {self.start_time} on {self.date} and lasts for {self.meeting_duration} hour"
