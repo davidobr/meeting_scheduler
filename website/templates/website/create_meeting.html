@@ -1,0 +1,23 @@
+{% extends 'basepage.html' %}
+
+{% block title%}Update Meeting{% endblock %}
+
+{% block content %}
+    <div class="header col-12 mx-auto text-center align-items-center">
+        <h1 class="col-12 mx-auto">Create Meeting</h1>
+        <div class="row mx-auto">
+            <div id="nav" class="col-12 mx-auto">
+                <a href="{% url 'home' %}" class="navigation p-2">Home</a>
+                <a href="{% url 'meetings' %}" class="navigation p-2">Meetings</a>
+                <a href="{% url 'rooms' %}" class="navigation p-2">Rooms</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-lg-4 mx-auto mt-5 mx-auto align-items-center homepage-body">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="Submit" value="Create Meeting"/>
+        </form>
+    </div>
+{% endblock %}
