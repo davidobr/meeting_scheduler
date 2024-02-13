@@ -31,7 +31,15 @@
         {% endif %}
       </div>
     </div>
-    <div class="col-10 col-lg-10 mx-auto mt-5 mx-auto align-items-center create-meeting">
+    <!-- For some reason depending on the number of meetings, the meeting text seems to be placed either centre or
+    to the left, if statement put in place to resolve that for now, until I can work out a proper fix -->
+    {% if meeting_count > 1 %}
+        <div class="col-10 col-lg-12 mx-auto mt-5 mx-auto align-items-center create-meeting">
         <p>Want to create a meeting? <a href="{% url 'create_meeting' %}"><strong>Book it in here</strong></a></p>
     </div>
+    {% else %}
+        <div class="col-10 col-lg-2 mx-auto mt-5 mx-auto align-items-center create-meeting">
+            <p>Want to create a meeting? <a href="{% url 'create_meeting' %}"><strong>Book it in here</strong></a></p>
+        </div>
+    {% endif %}
 {% endblock %}
