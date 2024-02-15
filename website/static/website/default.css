@@ -41,3 +41,8 @@ a {
     float: right;
     padding-top: 5px;
 }
+
+#meeting-details {
+    text-decoration: underline;
+    font-weight: bold;
+}
