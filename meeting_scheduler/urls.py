@@ -22,7 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', homepage, name="home"),
     path('meetings', meeting, name="meetings"),
-    path('meetings/', include('meetings.urls')),
+    path('meetings/details/', include('meetings.urls'), name="meeting_details"),
     path('meetings/create', CreateMeeting.as_view(), name="create_meeting"),
     path('meetings/update/<pk>', UpdateMeeting.as_view(), name="update_meeting"),
     path('meetings/delete/<pk>', DeleteMeeting.as_view(), name="delete_meeting"),
