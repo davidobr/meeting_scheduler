@@ -4,7 +4,7 @@
 
 {% block content %}
     <div class="header col-12 mx-auto text-center align-items-center">
-        <h1 class="col-12 mx-auto">Delete Meeting</h1>
+        <h1 class="col-12 mx-auto">Update Meeting</h1>
         <div class="row mx-auto">
             <div id="nav" class="col-12 mx-auto">
                 <a href="{% url 'home' %}" class="navigation p-2">Home</a>
@@ -16,8 +16,8 @@
     <div class="col-12 col-lg-4 mx-auto mt-5 mx-auto align-items-center homepage-body">
         <form method="POST">
             {% csrf_token %}
-            <p>Are you sure you want to delete the meeting "{{ object.meeting_title }}"?</p>
-            <input type="Submit" value="Confirm deletion of meeting: {{ object.meeting_title }}"/>
+            {{ form.as_p }}
+            <input type="Submit" value="Update Meeting"/>
         </form>
     </div>
 {% endblock %}
