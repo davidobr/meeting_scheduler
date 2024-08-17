@@ -6,6 +6,8 @@ With this meeting scheduler project the plan is as follows:
 * Continually improve it as I continue to learn
 * Experiment around/learn and improve with GIT/GitHub
 
+## Commands to get the server up and running locally
+
 Running the server locally:
 ```commandline
 python manage.py runserver
